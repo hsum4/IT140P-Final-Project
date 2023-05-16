@@ -43,6 +43,12 @@ namespace IT140P_Final_Project
                 StartActivity(home_loan_activity);
             };
 
+            button4.Click += (s, e) =>
+            {
+                Intent education_loan_activity = new Intent(this, typeof(EducationLoan));
+                StartActivity(education_loan_activity);
+            };
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
