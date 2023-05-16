@@ -47,13 +47,13 @@ namespace IT140P_Final_Project
 
         public void PersonalLoanService(object sender, EventArgs e)
         {
-            LoanService.SoapServiceTest PersonalLoanService = new LoanService.SoapServiceTest();
+            LoanService.SoapServiceTest soapLoanService = new LoanService.SoapServiceTest();
 
             float loanAmount = float.Parse(editText1.Text);
             float interestRate = float.Parse(editText2.Text);
             int loanTerm = int.Parse(editText3.Text);
 
-            output1.Text = PersonalLoanService.calculate_personal_loan_repayment(loanAmount,interestRate,loanTerm).ToString();
+            output1.Text = ("Pay " + soapLoanService.calculate_personal_loan_repayment(loanAmount,interestRate,loanTerm).ToString() + " a month");
 
         }
 

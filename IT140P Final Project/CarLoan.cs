@@ -47,14 +47,14 @@ namespace IT140P_Final_Project
 
         public void CarLoanService(object sender, EventArgs e)
         {
-            LoanService.SoapServiceTest CarLoanService = new LoanService.SoapServiceTest();
+            LoanService.SoapServiceTest soapLoanService = new LoanService.SoapServiceTest();
 
             float carPrice = float.Parse(editText1.Text);
             float downPayment = float.Parse(editText2.Text);
             float interestRate = float.Parse(editText3.Text);
             int loanTerm = int.Parse(editText4.Text);
 
-            output1.Text = CarLoanService.calculate_car_loan_repayment(carPrice, downPayment, interestRate, loanTerm).ToString();
+            output1.Text = ("Pay " + soapLoanService.calculate_car_loan_repayment(carPrice, downPayment, interestRate, loanTerm).ToString() + " a month");
 
         }
 
