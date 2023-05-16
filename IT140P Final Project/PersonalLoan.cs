@@ -19,6 +19,22 @@ namespace IT140P_Final_Project
             base.OnCreate(savedInstanceState);
 
             // Create your application here
+            SetContentView(Resource.Layout.personal_loan);
+            Button calculateButton, backButton;
+            EditText editText1, editText2, editText3;
+
+            calculateButton = FindViewById<Button>(Resource.Id.calculateButton);
+            backButton = FindViewById<Button>(Resource.Id.backButton);
+
+            editText1 = FindViewById<EditText>(Resource.Id.loanAmountEditText);
+            editText2 = FindViewById<EditText>(Resource.Id.interestRateEditText);
+            editText3 = FindViewById<EditText>(Resource.Id.loanTermEditText);
+
+            backButton.Click += delegate
+            {
+                this.Finish();
+            };
+
         }
     }
 }
