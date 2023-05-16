@@ -31,6 +31,12 @@ namespace IT140P_Final_Project
                  StartActivity(personal_loan_activity);
              };
 
+            button2.Click += (s, e) =>
+            {
+                Intent car_loan_activity = new Intent(this, typeof(CarLoan));
+                StartActivity(car_loan_activity);
+            };
+
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
